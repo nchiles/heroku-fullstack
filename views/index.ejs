@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Heroku Fullstack</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' integrity='sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z' crossorigin='anonymous'>
+  <link rel='stylesheet' href='style.css'>
+  <link rel='preconnect' href='https://fonts.gstatic.com'>
+  <link href='https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap' rel='stylesheet'>
+  <script src='https://code.jquery.com/jquery-3.5.1.js'></script>
+  <script src='script.js'></script>
+</head>
+<body>
+  <div class='container'>
+
+    <div class='row justify-content-center align-items-center suggestionSection'>
+      <div class='col-8'>   
+        <div class='row suggestion'> 
+          <h1>Do you want to <span id='suggestedActivity'></span> today?</h1> 
+        </div> 
+      </div>
+    </div>
+
+    <div class='row justify-content-center buttons-row'>
+      <button type='button' class='btn btn-info col-4 options' id='getActivity' onclick='getActivity()'>No thanks</button>        
+      <button type='button' class='btn btn-primary col-4 options' id='saveActivity' onclick='saveActivity()'>Sounds fun!</button>               
+    </div> 
+
+    <div class='row justify-content-center'>
+      <div class='col-8'>   
+        <div class='row'>
+          <h4>Today's Activities:<span id='activityCount'> <%= count %></span></h4>
+        </div>
+        <div class='row'>
+          <ul id='activityList'>
+            <% activities.forEach(function(r) { %>
+              <li><%= r.activity %></li>
+            <% }); %>
+          </ul>
+        </div>
+        <div class='row'>
+          <button type='button' class='btn btn-outline-danger col' id='deleteActivities' onclick='deleteActivities()'>Start Over</button>      
+        </div>    
+      </div> 
+    </div>
+
+  </div> 
+</body>

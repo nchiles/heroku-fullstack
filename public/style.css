@@ -1,0 +1,52 @@
+html, body {  
+  background-color: #23272b;
+}
+
+.container {
+  margin: 2rem auto;
+  max-width: 600px;
+  background-color: #fbfbfb;
+  border-radius: 20px;
+}
+
+.suggestionSection {
+  height: 400px;
+}
+
+h1 {
+  margin-top: 4rem;
+  color: #33383e;
+  font-family: 'Permanent Marker';
+  font-size: 3rem;
+}
+
+.options {
+  margin: 1rem 0 4rem .25rem
+}
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#activityCount {
+  padding-left: .25rem;
+}
+
+h4, #activityList {
+  color: black;
+}
+
+.btn-outline-danger {
+  margin: 2rem 0 4rem 0;;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    max-width: 350px;
+  }
+
+  h1 {
+    margin-top: 2.5rem;
+    font-size: 2rem;
+  }
+}
